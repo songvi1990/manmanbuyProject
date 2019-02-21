@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <!-- 引入网站图标 -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入mui.css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入公共less文件 -->
+    <link rel="stylesheet/less" href="../css/base.less">
+    <!-- 引入当前页面的less文件 -->
+    <link rel="stylesheet/less" href="../css/categoryDetail1.less">
+    <!-- 引入编译less文件的less.js -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="top"><a href="#" class="logo"><img src="../images/header_logo.png" alt=""></a>
+            <a href="#" class="download"><img src="../images/header_app.png" alt=""></a> </div>
+        <!-- 搜索栏 -->
+        <div class="hxw-search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">
+                搜索
+            </button>
+        </div>
+    </header>
+    <!-- 主体部分 -->
+    <main id="xy-main">
+        <div class="mui-scroll-wrapper">
+                <div class="mui-scroll"> 
+                    <div id="titles">
+                            <div class="big-title">
+                                    <div class="main-title">
+                                            <a href="index.html">首页</a>&nbsp;>
+                                            <a href="#">平板电视</a>&nbsp;>
+                                            <a href="#">小米L32M-Z</a>
+                                        </div>
+                                </div> 
+                    </div>
+                    
+                    
+                    <div class="content">
+                    </div>
+                </div>
+        </div>
+    </main>
+            <!-- 尾部区域 -->
+    <footer id="hxw-footer">
+        <div class="function">
+            <a href="#" class="logIn">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="back"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+        </div>
+        <div class="download">
+            <a href="#">手机APP下载</a>
+            <span>
+                慢慢买手机版 <a href="#">
+                    -- 掌上比价平台
+                </a></span>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </footer>
+        <!-- </div>
+    </div> -->
+
+</body>
+
+</html>
+<script type="text/html" id="productNavTpl">
+    {{ each result value }}
+        <div class="big-title" data-title-id=" {{ value.titleId }} ">
+            <div class="main-title">
+                <a href="../index.html">首页 ></a>
+                <a href="categoryDetail.html?categoryId={{ value.categoryId }}"> {{ value.category }} ></a>
+                <a href="category.html" class="nangao">风机666 ></a>
+                
+            </div>
+            
+        </div>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="contentTpl">
+     {{each result value}}
+    <!-- 商品详情头部部分 -->
+    <div class="detail-head">
+        <p class="name">{{value.productName}}</p>
+        <div class="pic">{{@value.productImg}}</div>
+    </div>
+    <!-- 商品详情tab切换比价购买部分 -->
+    <div class="detail-tab">
+        <div class="title">
+            <a href="#">比价购买</a>
+            <a href="#">产品参数</a>
+            <a href="#">优选评价</a>
+        </div>
+        <div class="content">
+        {{@value.bjShop}}
+        <div>
+    </div>
+    <div class="detail-explain">
+        <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+    </div>
+    <!-- 商品详情网友评论部分 -->
+    <div class="detail-comment">
+       
+    </div>
+    <button type="button" class="look-more">查看更多评价</button>
+    {{/each}}
+</script>
+
+<script type="text/html" id="commentTpl">
+        <div class="title">
+            网友评价
+        </div>
+        <div class="comment-list">
+                <ul>
+                        {{each result value index}}
+                        <li>
+                            <div class="comment-name">
+                                <span class="name">{{value.comName}}</span>
+                                <span>{{value.comTime}}</span>
+                            </div>
+                            <div class="comment-like">
+                                <ul>
+                                    <li>
+                                        <img src="../images/star.svg" alt="">
+                                        <img src="../images/star.svg" alt="">
+                                        <img src="../images/star.svg" alt="">
+                                        <img src="../images/star.svg" alt="">
+                                    </li>
+                                </ul>
+                                <span>{{value.comFrom}}</span>
+            
+                            </div>
+                            <div class="comment-content">
+                                {{value.comContent}}
+                            </div>
+                        </li>
+                        {{/each}}
+                 </ul>
+        </div>
+
+    
+
+
+</script>
+
+<!-- 引入zepto.js -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入mui.js -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入artTemplate.js -->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入brandTitle.js -->
+<script src="../js/categoryDetail1.js"></script>

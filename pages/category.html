@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索</title>
+    <!-- 0.引入rem.js -->
+    <!-- <script src="js/rem.js"></script> -->
+    <!-- 1.引入MUI的CSS -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <!-- 2.引入字体图标的CSS -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入自己写的less文件 -->
+    <link rel="stylesheet/less" href="../css/categoryList.less">
+    <!-- 4.引入less的编译器文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="top"><a href="#" class="logo"><img src="../images/header_logo.png" alt=""></a>
+            <a href="#" class="download"><img src="../images/header_app.png" alt=""></a> </div>
+        <!-- 搜索栏 -->
+        <div class="hxw-search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">
+                搜索
+            </button>
+        </div>
+    </header>
+    <!-- 分类区域 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view"> 
+                        <li class="mui-table-view-cell mui-collapse category-table">
+                            <a class="mui-navigate-right big-title" href="#">大&nbsp;家&nbsp;电</a>
+                            <ul class="category-ul">
+                                    <li class="category-rows">
+                                            <a href="#">空调</a>
+                                    </li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+        </div>   
+    </main>
+    <!-- 尾部区域 -->
+    <footer id="hxw-footer">
+        <div class="function">
+            <a href="#" class="logIn">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="back"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+        </div>
+        <div class="download">
+            <a href="#">手机APP下载</a>
+            <span>
+                慢慢买手机版 <a href="#">
+                    -- 掌上比价平台
+                </a></span>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+    <script type="text/html" id="categoryFirstTpl">
+            {{each result value index}}
+                <li class="mui-table-view-cell mui-collapse category-table">
+                    <a class="mui-navigate-right big-title" href="#" data-id={{value.titleId}}>{{value.title}}</a>
+                    <div class="mui-collapse-content">
+                        <ul class="category-ul">
+                        </ul>
+                    </div>
+                </li>
+            {{/each}}
+    </script>
+    <script type="text/html" id="categorySecondTpl">
+        <ul class="category-ul">
+            {{each result value index}}
+                <li class="mui-table-view-cell category-rows">
+                    <a href="categoryDetail.html?categoryId={{value.categoryId}}" data-id="{{ value.titleId }}">{{value.category}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </script>
+    <!-- 5.引入zepto的JS -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 6.引入MUI的JS -->
+    <script src="../lib/mui/js/mui.js"></script>
+    <!-- 7.引入模板引擎的JS -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入自己的JS文件 -->
+    <script src="../js/categoryList.js"></script>
+
+</body>
+
+</html>

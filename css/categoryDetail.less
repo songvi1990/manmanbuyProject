@@ -1,0 +1,254 @@
+@import 'base.less';
+
+option{
+    width: .1rem;
+}
+
+#header{
+     height: 1rem;
+     width: 100%;
+     padding: 0.02rem .05rem;
+     .top {
+         padding: 0.1rem;
+         height: 0.5rem;
+         background-color: @main-color;
+         background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+         display: flex;
+         justify-content: space-between;
+         .logo {
+             width: 1.9rem;
+             img {
+                 width: 100%;
+            }
+        }
+         .download {
+             width: 0.3rem;
+             img {
+                 width: 100%;
+            }
+        }
+    }
+    .hxw-search{
+        margin-top: .02rem;
+        background-color: #fff;
+        height: 0.5rem;
+        display: flex;
+        padding: 0.1rem;
+        input {
+            text-align: left;
+            font-size: 0.14rem;
+            margin-right: 0.1rem;
+            padding-left: 0.1rem;
+            background-color: #f1f1f1;
+            flex: 1;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            border: none;
+       }
+        button {
+            background-color: @main-color;
+            width: 0.65rem;
+            height: 0.3rem;
+            color: #fff;
+            border-radius: 0.15rem;
+            border: none;
+       }
+   }
+}
+
+
+
+#main{
+    overflow: scroll;
+    flex:1;
+    // height: 100%;
+    margin-top: .1rem;
+    padding-bottom: .1rem;
+    display: flex;
+    position:relative;
+
+    .mui-scroll-wrapper{
+        // position: relative;
+        .mui-scroll{
+            // position: relative;
+            // padding-top:1rem;
+            // padding-bottom: .8rem;
+
+            #nav{
+                height: .3rem;
+                .nav-left{
+                    float: left;
+                    margin-left: .05rem;
+                    line-height: .3rem;
+                    >a{
+                        color: black;
+                        font-size: .13rem;
+                    }
+                }
+                .nav-right{
+                    float: right;
+                    line-height: .3rem;
+                    .mui-btn{
+                        margin-right: .08rem;
+                        width: .6rem;
+                        font-size: .14rem;
+                        // font-weight: 400;
+                        border-radius: .06rem;
+                        background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ccc));
+                    
+                    }
+                    
+                }
+            }
+            #detail{
+                // padding-top:.3rem;
+                .listDetail{
+                    >li{
+                        height: 1.0rem;
+                        padding: .12rem 0.05rem;
+                        border-bottom: .01rem solid #ccc;
+                        .product{
+                            display:flex;
+                            .pic{
+                                width: 1.2rem;
+                                >img{
+                                    width: 100%;
+                                }
+                            }
+                            .shop-content{
+                                flex:1;
+                                .rightFirst{
+                                    font-size: .14rem;
+                                    color: black;
+                                    margin-bottom: .05rem;
+                                    line-height: .16rem;
+                                }
+                                .rightSecond{
+                                    font-size: .16rem;
+                                    color: red;
+                                }
+                                .other{
+                                    font-size: .12rem;
+                                    color: #c6c6c6;
+                                    >span{
+                                        margin-right: .05rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+        
+                }
+            }
+    
+        }
+    }
+}
+
+    
+   
+
+
+#page {
+    height: .4rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: .05rem .2rem;
+    .lastPage,.nextPage{
+      flex: 1;
+      width: .4rem;
+      font-size: .14rem;
+      margin: 0 .2rem;
+      // font-weight: 400;
+      border-radius: .06rem;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ccc));
+    }
+    button {
+        width: .8rem;
+        line-height: 0;
+        height: .3rem;
+    }
+
+   #selectPage{
+    //    flex: 1;
+    //    padding: 0;
+    //    margin:0rem;
+       border: .01rem solid #ccc;
+       .selectList{
+            width: 1rem;
+            margin-top: 0;
+            padding: 0;
+            margin-bottom: 0;
+            font-size: .16rem;
+            line-height: .25rem;
+            padding-left: .3rem;
+            option {
+                // user agent stylesheet
+                text-align: center;
+                width: 1rem;
+                height: 1rem;
+            }
+        
+
+        
+       }
+    }
+       
+}
+
+
+
+
+
+
+
+#hxw-footer {
+    background-color: #efefef;
+    height: .80rem;
+    .function {
+        border-top: 0.01rem solid #ccc;
+        border-bottom: 0.01rem solid #ccc;
+        height: 0.36rem;
+        text-align: center;
+        font-size: 0.14rem;
+        display: flex;
+        .logIn {
+            line-height: 0.36rem;
+            color: #666;
+            flex: 2;
+       }
+        .register {
+            border-left: 0.01rem solid #ccc;
+            border-right: 0.01rem solid #ccc;
+            line-height: 0.36rem;
+            color: #666;
+            flex: 2;
+       }
+        .back {
+            line-height: 0.36rem;
+            color: #666;
+            flex: 3;
+            img {
+                height: 0.14rem;
+           }
+       }
+   }
+    .download {
+        padding: 0.08rem;
+        color: #666;
+        font-size: 0.12rem;
+        text-align: center;
+        line-height: 0.12rem;
+        a {
+            color: red;
+       }
+        span {
+            a {
+                color: #666;
+           }
+       }
+   }
+}

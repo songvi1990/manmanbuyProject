@@ -1,0 +1,374 @@
+// 导入base.css公共样式文件
+// @import 'base.less';
+
+/* 设置rem的根元素大小  */
+html {
+    font-size: 26.6666667vw;
+}
+
+/* 设置body中的字体大小 */
+body {
+    font-size: .16rem;
+}
+/* 设置网页主题颜色 */
+@main-color: #ff4e49;
+
+/* 1,头部的搜索栏样式 */
+#header {
+    background-color: #fff;
+    height: 1.02rem;
+    position: relative;
+    z-index: 999;
+    .top {
+        padding-top: .12rem;
+        width: 100%;
+        height: .5rem;
+        background-color: @main-color;
+        overflow: hidden;
+        
+        position: fixed;
+        top: 0;
+
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            margin-left: .15rem;
+            img {
+                width: 1.9rem;
+            }
+        }
+        .download {
+            img {
+                width: .48rem;
+            }
+        }
+    }
+    .gf-search {
+        width: 100%;
+        display: flex;
+        padding: .1rem;
+        position: fixed;
+        top: .5rem;
+        background-color: #fff;
+
+        .searchBox {
+            flex: 1;
+            height: .34rem;
+            border-radius: .17rem;
+            font-size: .12rem;
+            background-color: #e5e5e5;
+            margin-bottom: 0;
+            border: none;
+        }
+
+        .btn-search {
+            padding: 0 .18rem;
+            height: .34rem;
+            background-color: @main-color;
+            color: #fff;
+            border-radius: .17rem;
+            font-size: .14rem;
+        }
+    }
+}
+
+/* 3,导航区域的样式 */
+#gf-nav {
+    overflow: hidden;
+    margin-top: .05rem;
+    padding: .1rem 0;
+    background-color: #fff;
+    height: 1.94rem;
+    transition:all 0.5s;
+     &.navShow {
+                // display: none;
+                height: 2.8rem !important; 
+            }
+    .nav-box {
+        .btn-nav-link {
+            margin: .07rem 0;
+            a {
+                display: block;
+                padding: 0 .17rem;
+                text-align: center;
+
+                img {
+                    width: 80%;
+                    margin-bottom: .02rem;
+                }
+
+                span {
+                    font-size: .13rem;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+/* 4,超值折扣推荐 */
+#gf-discount {
+    margin-top: .05rem;
+
+    .title {
+        height: .35rem;
+        background-color: @main-color;
+        line-height: .35rem;
+        padding: 0 .1rem;
+        span {
+            float: left;
+            color: #fff;
+        }
+        a {
+            float: right;
+
+            i {
+                font-size: .2rem;
+                line-height: .35rem;
+                color: #fff;
+            }
+        }
+    }
+    .content {
+        .product-line {
+            height: 1.2rem;
+            width: 100%;
+
+            &.mui-table-view-cell:after {
+                left: 0;
+            }
+
+            a {
+                .product-img {
+                    max-width: 1rem;
+                    height: 1rem;
+                    width: 1rem;
+                    background-color: transparent;
+                }
+
+                .product-text {
+                    height: 1rem;
+                    position: relative;
+                    .product-name {
+                        font-size: .13rem;
+                        line-height: .2rem;
+                        color: #000;
+                        white-space: normal;
+                    }
+                    .product-price {
+                        line-height: .2rem;
+                        font-size: .13rem;
+                        color: @main-color;
+                    }
+                    div {
+                        width: 100%;
+                        height: .25rem;
+                        line-height: .25rem;
+                        color: #aeabb1;
+                        position: absolute;
+                        bottom: 5px;
+
+                        span {
+                            font-size: .12rem;
+                            position: absolute;
+                            width: .8rem;
+                            color: #aeabb1;
+
+                            &.from-source {
+                                left: 0;
+                            }
+
+                            &.product-comment {
+                                right: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 5,更多优惠信息 */
+#gf-more {
+    padding: .1rem .15rem;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+
+    a {
+        display: block;
+        width: 100%;
+        height: .35rem;
+        line-height: .35rem;
+        text-align: center;
+        color: #000;
+        border: 1px solid #ccc;
+    }
+}
+
+/* 6,火箭样式 */
+#rocket {
+    display: none;
+    position: fixed;
+    bottom: .2rem;
+    right: .1rem;
+
+    cursor: pointer;
+    width: .45rem;
+    height: .45rem;
+    background-color: #b8b9bb;
+    border-radius: 50%;
+    text-align: center;
+    line-height: .45rem;
+
+    i {
+        font-size: .2rem;
+        color: #666;
+    }
+
+}
+
+/* 7,悬浮窗样式 */
+#dots {
+    width: .4rem;
+    height: .4rem;
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    left: 0.1rem;
+    // 黑色透明背景
+    .dot-bg {
+        width: .4rem;
+        height: .4rem;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 8px #fff;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+    transition: all .5s;
+    }
+
+    .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        &.xuanzhuan{
+            transform: rotateZ(360deg);
+        }
+        a {
+            // width: .34rem;
+            // height: .34rem;
+            position: absolute;
+            .dot-icon {
+                display: none;
+                width: .34rem;
+                height: .34rem;
+                // position: absolute;
+            }
+            &:nth-child(1){
+                top: -0.38rem;
+                left: 0px;
+            }
+            &:nth-child(2){
+                top: -0.19rem;
+                left: -0.33rem;
+            }
+            &:nth-child(3){
+                top: .17rem;
+                left: -0.37rem;
+            }
+            &:nth-child(4){
+                top: .42rem;
+                left: -0.11rem;
+            }
+            &:nth-child(5){
+                top: .39rem;
+                left: .25rem;
+            }
+            &:nth-child(6){
+                top: .1rem;
+                left: .44rem;
+            }
+            &:nth-child(7){
+                top: -0.26rem;
+                left: .34rem;
+            }
+           
+        }
+    }
+}
+.dotBig {
+    transform: scale(3, 3);
+}
+
+/* 设置公共的网站底部样式 */
+#gf-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #232a34;
+    .title {
+        height: .35rem;
+        background-color: @main-color;
+        line-height: .35rem;
+        padding: 0 .1rem ;
+        span {
+            float: left;
+            color: #fff;
+        }
+        a {
+            float: right;
+            i {
+                font-size: .2rem;
+            line-height: .35rem;
+                color: #fff;
+            }
+        }
+    }
+    .function {
+        margin: .15rem .05rem;
+        height: .35rem;
+        width: auto;
+        border: 1px solid #ccc;
+        a {
+            width: 30%;
+            height: .34rem;
+            position: absolute;
+            text-align: center;
+            line-height: .34rem;
+            color: #fff;
+            font-size: .14rem;
+            &.login  {
+                left: 0;
+                border-right: 1px solid #ccc;
+            }
+            &.register {
+                border-right: 1px solid #ccc;
+                left: 30%;
+            }
+            &.return {
+                right: 0;
+                width: 40%;
+            }
+        }
+    }
+    .download {
+        text-align: center;
+        font-size: .12rem;
+        padding-bottom: .15rem;
+        a {
+            color: red;
+            font-size: .12rem;
+        }
+        span {
+                color: #aeabb1;
+        }
+    }
+}

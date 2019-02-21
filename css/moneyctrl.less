@@ -1,0 +1,151 @@
+
+/* 设置rem的根元素大小  */
+html {
+    font-size: 26.6666667vw;
+}
+
+/* 设置网页主题颜色 */
+@main-color: #ff4e49;
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: .16rem;
+}
+
+#header{
+    display: flex;
+    height: .5rem;
+    background-color: @main-color;
+    .center{
+        flex: 1;
+        height: .5rem;
+        line-height: .5rem;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+    }
+    .left{
+        width: .48rem;
+        height: .5rem;
+        line-height: .5rem;
+        text-align: center;
+        color: #fff;
+    }
+    .download{
+        width: .4rem;
+        height: .4rem;
+        margin: .05rem .05rem;
+        text-align: center;
+        color: #fff;
+        img{
+            width: 100%;
+        }
+    }
+}
+#main{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    .product-list{
+        background-color: #fff;
+        .product-info{
+            padding: .05rem;
+            .mui-col-xs-4{
+                padding: .1rem;
+                img{
+                    width: 100%;
+                }
+            }
+           .mui-col-xs-8{
+               padding-top: .1rem;
+               text-align: left;
+               .productName{
+                   color: black;
+                   margin: 0;
+               }
+               .productPinkage{
+                   color: goldenrod;
+                   margin: 0;
+               }
+               .productFromTime{
+                   margin-top: .3rem;
+                   font-size: .12rem;
+                   .productComCount{
+                       float: right;
+                   }
+               }
+           } 
+        }
+    }
+}
+
+
+#paging{
+    padding: 0.1rem 0.3rem;
+    display: flex;
+    background: #fff;
+    #selectAge{
+        flex: 1;
+        margin: 0 0.25rem;
+        border: 1px solid #ccc !important;
+        height: 0.35rem;
+        line-height: 0.17rem;
+   }
+    a {
+        height: 0.35rem;
+        background: #d4d4d4;
+        flex: 1;
+        border-radius: 0.05rem;
+        box-shadow: 0rem 0rem 0.05rem #ccc;
+   }
+}
+
+
+
+#footer {
+    // height: 1.3rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #232a34;
+    .function {
+        margin: .15rem .05rem;
+        height: .35rem;
+        width: auto;
+        border: 1px solid #ccc;
+        a {
+            width: 30%;
+            height: .34rem;
+            position: absolute;
+            text-align: center;
+            line-height: .34rem;
+            color: #fff;
+            font-size: .14rem;
+            &.login  {
+                left: 0;
+                border-right: 1px solid #ccc;
+            }
+            &.register {
+                border-right: 1px solid #ccc;
+                left: 30%;
+            }
+            &.return {
+                right: 0;
+                width: 40%;
+            }
+        }
+    }
+    .download {
+        text-align: center;
+        font-size: .12rem;
+        padding-bottom: .15rem;
+        a {
+            color: red;
+            font-size: .12rem;
+        }
+        span {
+                color: #aeabb1;
+        }
+    }
+}

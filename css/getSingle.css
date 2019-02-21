@@ -1,0 +1,195 @@
+html {
+  /* 设置 根元素在 375屏幕下的时候 是100px   100px就是 26.66667vw */
+  font-size: 26.66667vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  /* 解决图片和块级元素3px间隙问题 */
+  vertical-align: middle;
+}
+/* 实现头部 中间 底部的上中下布局 给body设置 flex布局 让头部和底部高度固定 中间flex1 自适应 */
+/* 设置body中的字体大小 */
+body {
+  font-size: .16rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+ul,
+li {
+  list-style: none;
+}
+/* 设置网页主题颜色 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: #f1f1f1;
+}
+#header {
+  border-bottom: 1px solid #eee;
+  height: 0.5rem;
+}
+#header .content {
+  height: .5rem;
+  background-color: #ffa026;
+  display: flex;
+  justify-content: space-between;
+  padding: .02rem .1rem;
+  font-size: .2rem;
+  line-height: .46rem;
+  text-align: center;
+  color: white;
+}
+#header .content i {
+  color: white;
+}
+#header .content a {
+  display: block;
+  height: 100%;
+}
+#header .content a img {
+  width: 0.46rem;
+  height: 0.46rem;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+#main .title .keyword {
+  display: flex;
+  height: .30rem;
+  line-height: .30rem;
+  text-align: center;
+  font-size: .16rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+#main .title .keyword i {
+  margin-left: .1rem;
+}
+#main .title .keyword li:nth-child(4) {
+  border-left: 1px solid #f1f1f1;
+}
+#main .title .keyword .search i {
+  margin-left: 0;
+}
+#main .title .shop-select,
+#main .title .area-select {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+#main .title .shop-select li,
+#main .title .area-select li {
+  display: flex;
+  justify-content: space-between;
+}
+#main .title .shop-select li i,
+#main .title .area-select li i {
+  color: hotpink;
+}
+#main .content {
+  padding: .1rem .1rem;
+}
+#main .content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#main .content ul li {
+  width: 49%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2.3rem;
+  padding: .05rem;
+  margin-bottom: .1rem;
+}
+#main .content ul li img {
+  width: 100%;
+  height: 1.6rem;
+}
+#main .content ul li .name {
+  text-align: center;
+  color: #000;
+  font-size: .1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#main .content ul li .price {
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  font-size: .18rem;
+}
+#main .content ul li .price .btn {
+  color: white;
+  background-color: #ff9501;
+  display: block;
+  font-size: .14rem;
+  padding: .05em .1rem;
+  border-radius: .03rem;
+}
+#hxw-footer {
+  background-color: #efefef;
+  height: .80rem;
+}
+#hxw-footer .function {
+  border-top: 0.01rem solid #ccc;
+  border-bottom: 0.01rem solid #ccc;
+  height: 0.36rem;
+  text-align: center;
+  font-size: 0.14rem;
+  display: flex;
+}
+#hxw-footer .function .logIn {
+  line-height: 0.36rem;
+  color: #666;
+  flex: 2;
+}
+#hxw-footer .function .register {
+  border-left: 0.01rem solid #ccc;
+  border-right: 0.01rem solid #ccc;
+  line-height: 0.36rem;
+  color: #666;
+  flex: 2;
+}
+#hxw-footer .function .back {
+  line-height: 0.36rem;
+  color: #666;
+  flex: 3;
+}
+#hxw-footer .function .back img {
+  height: 0.14rem;
+}
+#hxw-footer .download {
+  padding: 0.08rem;
+  color: #666;
+  font-size: 0.12rem;
+  text-align: center;
+  line-height: 0.12rem;
+}
+#hxw-footer .download a {
+  color: red;
+}
+#hxw-footer .download span a {
+  color: #666;
+}

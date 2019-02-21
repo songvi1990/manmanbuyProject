@@ -1,0 +1,49 @@
+html {
+  /* 设置 根元素在 375屏幕下的时候 是100px   100px就是 26.66667vw */
+  font-size: 26.66667vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  /* 解决图片和块级元素3px间隙问题 */
+  vertical-align: middle;
+}
+/* 实现头部 中间 底部的上中下布局 给body设置 flex布局 让头部和底部高度固定 中间flex1 自适应 */
+/* 设置body中的字体大小 */
+body {
+  font-size: .16rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+ul,
+li {
+  list-style: none;
+}
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 14px;
+}
+option::-ms-expand {
+  display: none;
+}
+option {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari 和 Chrome */
+  appearance: none;
+}
+/* --背景色字体颜色--*/
+option:hover {
+  color: #fff;
+  background-color: red;
+  min-height: 0;
+}
+/* 设置网页主题颜色 */

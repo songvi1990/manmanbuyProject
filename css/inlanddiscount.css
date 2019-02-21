@@ -1,0 +1,119 @@
+/* 设置rem的根元素大小  */
+html {
+  font-size: 26.6666667vw;
+}
+/* 设置body中的字体大小 */
+/* 设置网页主题颜色 */
+body {
+  font-size: .16rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  display: flex;
+  height: .5rem;
+  background-color: #ff4e49;
+}
+#header .center {
+  flex: 1;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+#header .left {
+  width: .48rem;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: #fff;
+}
+#header .download {
+  width: .4rem;
+  height: .4rem;
+  margin: .05rem .05rem;
+  text-align: center;
+  color: #fff;
+}
+#header .download img {
+  width: 100%;
+}
+#main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+#main .product-list .product {
+  position: relative;
+  height: 2.86rem;
+  padding: .1rem;
+  text-align: left;
+  box-shadow: 0 0 1px #ccc;
+}
+#main .product-list .product img {
+  width: 100%;
+  text-align: center;
+}
+#main .product-list .product .product-bottom {
+  position: absolute;
+  bottom: 0;
+}
+#main .product-list .product .product-bottom .productName {
+  color: black;
+  font-weight: 700;
+  margin: 0;
+}
+#main .product-list .product .product-bottom .productPrice {
+  color: goldenrod;
+}
+#main .product-list .product .product-bottom .productFromTime {
+  margin-bottom: 0;
+}
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #232a34;
+}
+#footer .function {
+  margin: .15rem .05rem;
+  height: .35rem;
+  width: auto;
+  border: 1px solid #ccc;
+}
+#footer .function a {
+  width: 30%;
+  height: .34rem;
+  position: absolute;
+  text-align: center;
+  line-height: .34rem;
+  color: #fff;
+  font-size: .14rem;
+}
+#footer .function a.login {
+  left: 0;
+  border-right: 1px solid #ccc;
+}
+#footer .function a.register {
+  border-right: 1px solid #ccc;
+  left: 30%;
+}
+#footer .function a.return {
+  right: 0;
+  width: 40%;
+}
+#footer .download {
+  text-align: center;
+  font-size: .12rem;
+  padding-bottom: .15rem;
+}
+#footer .download a {
+  color: red;
+  font-size: .12rem;
+}
+#footer .download span {
+  color: #aeabb1;
+}

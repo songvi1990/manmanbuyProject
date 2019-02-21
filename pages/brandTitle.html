@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌商品大全</title>
+    <!-- 引入网站图标 -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入mui.css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入公共less文件 -->
+    <!-- <link rel="stylesheet/less" href="../css/base.less"> -->
+    <!-- 引入当前页面的less文件 -->
+    <link rel="stylesheet/less" href="../css/brandTitle.less">
+    <!-- 引入编译less文件的less.js -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 1,网站头部 -->
+    <header id="header">
+        <!-- 顶部边栏 -->
+        <div class="top" id="top"><a href="#" class="logo"><img src="../images/header_logo.png" alt=""></a><a href="#"
+                class="download"><img src="../images/header_app.png" alt=""></a> </div>
+        <!-- 搜索栏 -->
+        <div class="xy-search"><input type="text" class="searchBox " placeholder="请输入你想比价的商品"><button type="button"
+                class="btn-search">搜索</button></div>
+    </header>
+    <!-- 主体模块 -->
+    <main id="xy-main">
+        <div class="xy-title">
+            <a href="index.html">首页</a>&nbsp;>
+            <a href="#">品牌大全</a>
+        </div>
+        <div class="xy-content">
+            <div class="xy-con-title">
+                热门品牌排行
+            </div>
+            <div class="xy-con-list">
+                <ul>
+                    <li>平板电视十大品牌<i class="fa fa-angle-down "></i></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <!-- 底部模块 -->
+    <footer id="xy-footer">
+        <div class="function">
+            <a href="#" class="login">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="return"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> 返回顶部</a>
+        </div>
+        <div class="download">
+            <a href="#">手机APP下载 </a> <span>慢慢买手机版 </span> <span>-- 掌上比价平台</span>
+            <p class="download-url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script id="brandListTpl" type="text/html">
+    {{each result value index}}
+        <li data-id="{{value.brandTitleId}}" data-title="{{value.brandTitle}}">{{value.brandTitle}}<i class="fa fa-angle-down "></i></li>
+    {{/each}}
+</script>
+<!-- 引入zepto.js -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入mui.js -->
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 引入artTemplate.js -->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入brandTitle.js -->
+<script src="../js/brandTitle.js"></script>
+<!-- 引入jquery-3.1.1.min.js -->
+<script src="../lib/jquery/jquery-3.1.1.min.js"></script>

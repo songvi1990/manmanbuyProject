@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价页面</title>
+    <link rel="stylesheet/less" href="../css/lowPrice.less">
+    <script src="../lib/less/less.js"></script>
+    <link rel="stylesheet" href="../css/lowPrice.less">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="zjc-left"><a href="javascript:history.back();"><i class="fa fa-angle-left"></i></a></div>
+        <div class="zjc-center">
+            <h5>白菜价-淘宝内部券</h5>
+        </div>
+        <div class="zjc-right"><i class="fa fa-download"></i></div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div id="list" class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <!-- 导航栏区域 -->
+        <nav class="nav">
+            <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                </div>
+            </div>
+        </nav>
+        <!-- 商品购买区域 -->
+        
+        <section class="shops">
+            <div class="zjc-goods">
+                <div class="zjc-left"><img src="../images/ic_mall.png" alt=""></div>
+                <div class="zjc-right">
+                    <p class="zjc-title">[包邮]双十一红包,现在开启</p>
+                    <div class="zjc-price">￥<i>9</i><del>￥9</del></div>
+                    <div class="progress">
+                        <div class="mui-progressbar demo1">
+                            <span></span>
+                        </div>
+                        <p class="zjc-brought">已领82张</p>
+                    </div>
+                    <div class="zjc-receive">
+                        <div class="zjc-coupons">点此领15元优惠券</div>
+                        <div class="zjc-buy">下单链接</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+        </div>
+        
+    </main>
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="zjc-top">
+            <div class="mui-row">
+                <a href="#" class="zjc-left mui-col-xs-4">登录</a>
+                <a href="#" class="zjc-center mui-col-xs-4">注册</a>
+                <a href="#" class="zjc-right mui-col-xs-4"><i class="fa fa-arrow-up"></i>返回顶部</a>
+            </div>
+        </div>
+        <div class="zjc-bottom">
+            <a href="#">手机APP下载</a>
+            <span>
+                慢慢买手机版 <a href="#">
+                    -- 掌上比价平台
+                </a></span>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+        <div href='#' class="fa fa-arrow-circle-o-up top_back"></div>
+    </footer>
+</body>
+<script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/lowPrice.js"></script>
+<!-- 导航栏的渲染 -->
+<script id="navTpi" type="text/html">
+    {{each result value index}}
+    <a href="#" class="nav-id {{index == 0 ? 'active' : ''}}" data-titleid='{{value.titleId}}'>{{value.title}}</a>
+    {{/each}}
+</script>
+<!-- 商品列表的渲染 -->
+<script id="shopsTpi" type="text/html">
+    {{each result value index}}
+    <div class="zjc-goods">
+        <div class="zjc-left">{{@value.productImg}}</div>
+        <div class="zjc-right">
+            <p class="zjc-title">{{@value.productName}}</p>
+            <div class="zjc-price">{{@value.productPrice}}</div>
+            <div class="progress" data-id='{{value.productId}}'>
+                {{@value.productCouponRemain}}
+            </div>
+            <div class="zjc-receive">
+                <div class="zjc-coupons">{{@value.productCoupon}}</div>
+                <div class="zjc-buy">{{@value.productHref}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+</html>

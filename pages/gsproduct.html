@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="../css/getSingle.less">
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+<!-- 头部区域 -->
+<header id="header">
+    <div class="content">
+        <a href="history.back();"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <span>凑单品</span>
+        <a href="#" class="download"><img src="../images/header_app.png" alt=""></a>
+    </div>
+</header>
+<main id="main">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--根据商城和地址进行选择-->
+            <div class="title">
+                <ul class="keyword">
+                    <li class="mui-col-xs-3 shop" data-id="0">京东<i class="fa fa-caret-down" aria-hidden="true"></i></li>
+                    <li class="mui-col-xs-3 area" data-id="0">华北<i class="fa fa-caret-down" aria-hidden="true"></i></li>
+                    <li class="mui-col-xs-5">全部价格<i class="fa fa-caret-down" aria-hidden="true"></i></li>
+                    <li class="mui-col-xs-1 search"><i class="fa fa-search" aria-hidden="true"></i></li>
+                </ul>
+                <ul class="mui-table-view shop-select display">
+                    <li class="mui-table-view-cell">
+                        Item 1
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </li>
+                </ul>
+                <ul class="mui-table-view area-select display">
+                    <li class="mui-table-view-cell">
+                        Item 1
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <ul class="goods">
+                    <li>
+                        <img src="../images/ic_temai.png" alt="">
+                        <p class="name">
+                            想买啥就买啥
+                        </p>
+                        <p class="price">
+                            ￥1.00
+                            <span class="btn">去凑单</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../images/ic_temai.png" alt="">
+                        <p class="name">
+                            想买啥就买啥
+                        </p>
+                        <p class="price">
+                            ￥1.00
+                            <span class="btn">去凑单</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../images/ic_temai.png" alt="">
+                        <p class="name">
+                            想买啥就买啥
+                        </p>
+                        <p class="price">
+                            ￥1.00
+                            <span class="btn">去凑单</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- 尾部区域 -->
+<footer id="hxw-footer">
+    <div class="function">
+        <a href="#" class="logIn">登录</a>
+        <a href="#" class="register">注册</a>
+        <a href="#" class="back"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+    </div>
+    <div class="download">
+        <a href="#">手机APP下载</a>
+        <span>
+                慢慢买手机版 <a href="#">
+                    -- 掌上比价平台
+                </a></span>
+        <p>
+            m.manmanbuy.com </p>
+    </div>
+</footer>
+
+</body>
+</html>
+<script id="shop-selectList" type="text/html">
+    {{each data value index}}
+    <li class="mui-table-view-cell" data-id="{{value.shopId}}" data-name="{{value.shopName}}">
+        {{value.shopName}}
+        {{if value.id == value.shopId}}
+        <i class="fa fa-check" aria-hidden="true"></i>
+        {{/if}}
+    </li>
+    {{/each}}
+</script>
+<script id="area-selectList" type="text/html">
+    {{each data value index}}
+    <li class="mui-table-view-cell" data-id="{{value.areaId}}" data-name="{{value.areaName}}">
+        {{value.areaName}}
+        {{if value.id == value.areaId}}
+        <i class="fa fa-check" aria-hidden="true"></i>
+        {{/if}}
+    </li>
+    {{/each}}
+</script>
+
+<script id="goods" type='text/html'>
+    {{each data value index}}
+        <li>
+            <img src="{{value.productImg}}" alt="">
+            <p class="name">
+                {{value.productName}}
+            </p>
+            <p class="price">
+                {{value.productPrice}}
+                <span class="btn">去凑单</span>
+            </p>
+        </li>
+    {{/each}}
+</script>
+
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../js/getSingle.js"></script>

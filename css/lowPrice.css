@@ -1,0 +1,246 @@
+html {
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+#header {
+  display: flex;
+  height: .4rem;
+  line-height: .4rem;
+  color: white;
+  background-color: #f4483e;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+#header a {
+  color: white;
+}
+#header .zjc-left {
+  width: .4rem;
+  font-size: .3rem;
+}
+#header .zjc-center {
+  flex: 1;
+}
+#header .zjc-center h5 {
+  line-height: .4rem;
+  color: white;
+  margin: 0;
+  font-size: .2rem;
+}
+#header .zjc-right {
+  width: .4rem;
+}
+#main {
+  flex: 1;
+  overflow: scroll;
+}
+#main #list {
+  margin-top: .4rem;
+  margin-bottom: .8rem;
+}
+#main .nav {
+  height: .3rem;
+}
+#main .nav .mui-scroll-wrapper {
+  height: .3rem;
+}
+#main .nav .mui-scroll-wrapper .mui-scroll {
+  height: .3rem;
+}
+#main .nav .mui-scroll-wrapper .mui-scroll a {
+  display: inline-block;
+  font-size: .14rem;
+  line-height: .3rem;
+  color: black;
+  line-height: .29rem;
+  margin: 0 .1rem;
+}
+#main .nav .mui-scroll-wrapper .mui-scroll a.active {
+  color: #f4483e;
+  border-bottom: 1px solid red;
+}
+#main .shops .zjc-goods {
+  height: 1.4rem;
+  display: flex;
+  padding-top: .1rem;
+  margin-bottom: .1rem;
+  background-color: #fff;
+}
+#main .shops .zjc-goods .zjc-left {
+  width: 1.2rem;
+}
+#main .shops .zjc-goods .zjc-left img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+#main .shops .zjc-goods .zjc-right {
+  flex: 1;
+  margin-left: .04rem;
+  height: 1.4rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-title {
+  margin-top: .04rem;
+  font-size: .14rem;
+  color: black;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: .18rem;
+  width: 2.5rem;
+  height: .18rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-price {
+  margin-top: .1rem;
+  font-size: .12rem;
+  color: #f4483e;
+  font-size: .2rem;
+  height: .24rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-price em {
+  margin-left: .05rem;
+  font-size: .14rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-price i {
+  font-size: .14rem;
+  font-style: normal;
+}
+#main .shops .zjc-goods .zjc-right .zjc-price del {
+  margin-left: .2rem;
+  font-size: .16rem;
+  color: #ccc;
+}
+#main .shops .zjc-goods .zjc-right .progress {
+  display: flex;
+}
+#main .shops .zjc-goods .zjc-right .progress b {
+  font-size: .14rem;
+}
+#main .shops .zjc-goods .zjc-right .progress .mui-progressbar {
+  height: .1rem;
+  width: .9rem;
+  margin-top: .05rem;
+}
+#main .shops .zjc-goods .zjc-right .progress .zjc-brought {
+  margin: 0;
+  margin-left: .04rem;
+  font-size: .14rem;
+  color: #f4483e;
+}
+#main .shops .zjc-goods .zjc-right .zjc-receive {
+  display: flex;
+  margin-top: .08rem;
+  height: .3rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-receive .zjc-coupons {
+  font-size: .12rem;
+  border: 1px dashed #f4483e;
+  line-height: .28rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-receive .zjc-coupons a {
+  display: block;
+  color: #f4483e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 1rem;
+}
+#main .shops .zjc-goods .zjc-right .zjc-receive .zjc-buy {
+  height: .3rem;
+  width: .7rem;
+  font-size: .14rem;
+  background-color: #f4483e;
+  text-align: center;
+  line-height: .3rem;
+  margin-left: .7rem;
+  color: #fff;
+}
+#main .shops .zjc-goods .zjc-right .zjc-receive .zjc-buy a {
+  color: #fff;
+}
+.bar {
+  height: .22rem;
+  display: flex;
+}
+.bar i {
+  position: relative;
+  float: left;
+  width: 1rem;
+  border: 1px solid;
+  font-size: .14rem;
+  margin-top: .04rem;
+}
+.bar i em {
+  float: left;
+  width: 0rem;
+  height: .12rem;
+  border: 0px;
+  background: red;
+  font-size: .14rem;
+  margin-top: .02rem;
+}
+.bar i span {
+  position: absolute;
+  left: 40%;
+  top: 0;
+  font-size: .16rem;
+  height: .16rem;
+  line-height: .16rem;
+}
+.bar b {
+  color: #f4483e;
+  font-size: .12rem;
+  margin-top: .06rem;
+  line-height: .12rem;
+}
+#footer {
+  position: relative;
+  height: .8rem;
+  background-color: #eee;
+  z-index: 999;
+}
+#footer .zjc-top {
+  height: .3rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#footer .zjc-top a {
+  color: black;
+  font-size: .14rem;
+  line-height: .3rem;
+}
+#footer .zjc-top a:nth-of-type(n+2) {
+  border-left: 1px solid #eee;
+}
+#footer .zjc-bottom {
+  margin-top: .1rem;
+  font-size: .12rem;
+  text-align: center;
+  line-height: .12rem;
+}
+#footer .zjc-bottom a {
+  color: #f4483e;
+}
+#footer .zjc-bottom span a {
+  color: black;
+}
+#footer .zjc-bottom p {
+  font-size: .12rem;
+}
+#footer .fa-arrow-circle-o-up {
+  position: absolute;
+  top: .3rem;
+  right: .1rem;
+  font-size: .3rem;
+  color: black;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索</title>
+    <!-- 0.引入rem.js -->
+    <!-- <script src="js/rem.js"></script> -->
+    <!-- 1.引入MUI的CSS -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <!-- 2.引入字体图标的CSS -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入自己写的less文件 -->
+    <link rel="stylesheet/less" href="../css/categoryDetail.less">
+    <!-- 4.引入less的编译器文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="top"><a href="#" class="logo"><img src="../images/header_logo.png" alt=""></a>
+            <a href="#" class="download"><img src="../images/header_app.png" alt=""></a> </div>
+        <!-- 搜索栏 -->
+        <div class="hxw-search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <button type="button">
+                搜索
+            </button>
+        </div>
+    </header>
+    <!-- 分类区域 -->
+    <main id="main">
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <section id="nav">
+            <div class="nav-left">
+
+            </div>
+            <div class="nav-right">
+                <button type="button" class="mui-btn mui-btn-outlined">筛选</button>
+            </div>
+        </section>
+        <section id="detail">
+            <ul class="listDetail">
+            </ul>
+        </section>
+      </div>
+    </div>    
+    </main>
+
+    <section id="page">
+            <button type="button" class="lastPage">上一页</button>
+            <div id="selectPage">
+                <select class="selectList" name="">
+                    <option class="option">
+                        <span class="spanFirst">1</span> / <span>3</span>
+                    </option>
+                </select>
+            </div>
+            <button type="button" class="nextPage">下一页</button>
+    </section>
+    <!-- 尾部区域 -->
+    <footer id="hxw-footer">
+        <div class="function">
+            <a href="#" class="logIn">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="back"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a>
+        </div>
+        <div class="download">
+            <a href="#">手机APP下载</a>
+            <span>
+                慢慢买手机版 <a href="#">
+                    -- 掌上比价平台
+                </a></span>
+            <p>
+                m.manmanbuy.com </p>
+        </div>
+    </footer>
+
+    <script type="text/html" id="navTpl">
+       {{each result value index}}
+         <div class="nav-left">
+                <a href="../index.html">首页 ></a>
+                <a href="category.html">全部分类 ></a>
+                <a href="categoryDetail.html?categoryId={{ value.categoryId }}">{{value.category}} ></a>
+                
+         </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="productTpl">
+        {{ each result value }}
+            <ul class='listDetail'>
+                <li>
+                    <a class="product" href="categoryDetail1.html?categoryid={{ value.categoryId }}&productId={{ value.productId }}">
+                        <div class="pic">
+                            {{@value.productImg}}
+                        </div>
+                        <div class="shop-content">
+                            <p class="rightFirst"> {{ value.productName }} </p>
+                            <p class='rightSecond'>
+                                {{ value.productPrice }}
+                            </p>
+                            <div class="other clearfix">
+                                <span>{{ value.productQuote }}</span>
+                                <span>{{ value.productCom }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        {{ /each }}
+    </script>
+
+    <!-- 5.引入zepto的JS -->
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <!-- 6.引入MUI的JS -->
+    <script src="../lib/mui/js/mui.js"></script>
+    <!-- 7.引入模板引擎的JS -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- 8.引入自己的JS文件 -->
+    <script src="../js/categoryDetail.js"></script>
+
+</body>
+
+</html>

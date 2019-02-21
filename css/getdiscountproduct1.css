@@ -1,0 +1,198 @@
+/* 设置rem的根元素大小  */
+html {
+  font-size: 26.6666667vw;
+}
+/* 设置网页主题颜色 */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: .16rem;
+}
+#header {
+  display: flex;
+  height: .5rem;
+  background-color: #ff4e49;
+}
+#header .center {
+  flex: 1;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+#header .left {
+  width: .48rem;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: #fff;
+}
+#header .download {
+  width: .4rem;
+  height: .4rem;
+  margin: .05rem .05rem;
+  text-align: center;
+  color: #fff;
+}
+#header .download img {
+  width: 100%;
+}
+#main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+#main .product-detail .product-info {
+  text-align: left;
+  padding: .1rem;
+}
+#main .product-detail .product-info .productName {
+  color: #000;
+  font-weight: 700;
+}
+#main .product-detail .product-info .productPrice {
+  color: goldenrod;
+}
+#main .product-detail .product-info .productInfo {
+  color: #000;
+}
+#main .product-detail .product-info img {
+  width: 100%;
+  text-align: center;
+}
+#main .product-detail .product-info .productCity ul {
+  width: 1rem;
+  margin: 0 auto;
+  box-shadow: 0 0 .01rem #ccc;
+  list-style: none;
+  padding: 0 .05rem;
+  padding-bottom: .1rem;
+}
+#main .product-detail .product-info .productCity ul li {
+  border-bottom: 1px dashed #ccc;
+  height: .22rem;
+}
+#main .product-detail .product-info .productCity ul li span {
+  color: black;
+}
+#main .product-detail .product-info .productCity ul li span strong {
+  font-weight: 400;
+  float: right;
+  color: goldenrod;
+}
+#main .product-detail .product-info > div {
+  padding: .2rem .1rem 0 .1rem;
+}
+#main .product-detail .product-info > div button {
+  width: 100%;
+}
+#main .product-detail .product-mmbweixin {
+  padding: .1rem;
+}
+#main .product-detail .product-mmbweixin img {
+  width: 100%;
+}
+#main .product-detail .product-mmbweixin .CommentContent .form {
+  position: relative;
+}
+#main .product-detail .product-mmbweixin .CommentContent textarea {
+  margin: 0;
+}
+#main .product-detail .product-mmbweixin .CommentContent .ctrl {
+  position: absolute;
+  bottom: -0.28rem;
+  right: 0;
+}
+#main .product-detail .product-mmbweixin .CommentContent .tit {
+  padding-top: .4rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul {
+  list-style: none;
+  padding: 0;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li {
+  height: .8rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .userimg {
+  width: .3rem;
+  height: .3rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li img {
+  width: 100%;
+  border-radius: 50%;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con {
+  position: relative;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con .name {
+  position: relative;
+  font-size: .12rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con .name .username {
+  color: cornflowerblue;
+  position: absolute;
+  top: -0.3rem;
+  left: .4rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con .name .time {
+  position: absolute;
+  top: -0.3rem;
+  right: 0;
+  color: #ccc;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con .content {
+  position: absolute;
+  top: 0;
+  left: .4rem;
+}
+#main .product-detail .product-mmbweixin .CommentContent ul li .con .content img {
+  width: .3rem;
+}
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #232a34;
+}
+#footer .function {
+  margin: .15rem .05rem;
+  height: .35rem;
+  width: auto;
+  border: 1px solid #ccc;
+}
+#footer .function a {
+  width: 30%;
+  height: .34rem;
+  position: absolute;
+  text-align: center;
+  line-height: .34rem;
+  color: #fff;
+  font-size: .14rem;
+}
+#footer .function a.login {
+  left: 0;
+  border-right: 1px solid #ccc;
+}
+#footer .function a.register {
+  border-right: 1px solid #ccc;
+  left: 30%;
+}
+#footer .function a.return {
+  right: 0;
+  width: 40%;
+}
+#footer .download {
+  text-align: center;
+  font-size: .12rem;
+  padding-bottom: .15rem;
+}
+#footer .download a {
+  color: red;
+  font-size: .12rem;
+}
+#footer .download span {
+  color: #aeabb1;
+}

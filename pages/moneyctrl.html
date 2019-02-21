@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣</title>
+    <!-- 导入mui的css样式文件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <!-- 导入字体图标的样式文件 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <!-- 导入自己写的lsa-getinlanddiscount.less -->
+    <link rel="stylesheet/less" href="../css/moneyctrl.less">
+    <!-- 导入less文件的编译器 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 1,网站头部 -->
+    <header id="header">
+        <!-- 顶部边栏 -->
+        <a href="javascript:history.back();" class="mui-icon mui-icon-back left"></a>
+        <h4 class="center">海淘折扣</h4>
+        <a href="#" class="download">
+            <img src="../images/header_app.png" alt="">
+        </a>
+
+    </header>
+    <!-- 网站主体 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper mainpage">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <!-- 商品列表 -->
+                <div class="product-list">
+                    <!-- <div class="product-info">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <img src="../images/ic_bcj.png" alt="">
+                    </div>
+                    <div class="mui-col-xs-8">
+                        <p class="productName">移动端凑单品: 海天 鲜味 生抽 1.28L</p>
+                        <p class="productPinkage">10元</p>
+                        <p class="productFromTime">
+                            <span class="productFrom">京东商城</span> |
+                            <span class="productTime">10-22 13:28</span>
+                            <span class="productComCount">评论数</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <img src="../images/ic_bcj.png" alt="">
+                    </div>
+                    <div class="mui-col-xs-8">
+                        <p class="productName">移动端凑单品: 海天 鲜味 生抽 1.28L</p>
+                        <p class="productPinkage">10元</p>
+                        <p class="productFromTime">
+                            <span class="productFrom">京东商城</span> |
+                            <span class="productTime">10-22 13:28</span>
+                            <span class="productComCount">评论数</span>
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+                </div>
+                <!-- 分页区域 -->
+                <section id="paging">
+                    <a href="javascript:getData(page-1)" class="mui-btn mui-btn-outlined previous" id="previous">上一页</a>
+                    <!-- <a href="#" class="mui-btn mui-btn-outlined">上一页</a> -->
+                    <select name="selectAge" id="selectAge">
+
+                    </select>
+                    <!-- <a href="#" class="mui-btn mui-btn-outlined">下一页</a> -->
+                    <a href="javascript:getData(page+1)" class="mui-btn mui-btn-outlined" id="below">下一页</a>
+                </section>
+
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- 6,网站底部 -->
+    <footer id="footer">
+
+        <div class="function">
+            <a href="#" class="login">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="return"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> 返回顶部</a>
+        </div>
+        <div class="download">
+            <a href="#">手机APP下载 </a> <span>慢慢买手机版 </span> <span>-- 掌上比价平台</span>
+            <p class="download-url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+
+    <script type="text/html" id="productTpl">
+        {{each result value index}}
+        <div class="product-info" data-id="{{value.productId}}">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        {{@value.productImgSm}}
+                    </div>
+                    <div class="mui-col-xs-8">
+                        <p class="productName">{{value.productName}}</p>
+                        <p class="productPinkage">{{value.productPinkage}}</p>
+                        <p class="productFromTime">
+                            <span class="productFrom">{{value.productFrom}}</span> |
+                            <span class="productTime">{{value.productTime}}</span>
+                            <span class="productComCount">{{value.productComCount}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+
+    <!-- 导入相应的js文件 -->
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="../js/moneyctrl.js"></script>
+</body>
+
+</html>

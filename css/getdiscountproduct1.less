@@ -1,0 +1,218 @@
+/* 设置rem的根元素大小  */
+html {
+    font-size: 26.6666667vw;
+}
+
+/* 设置网页主题颜色 */
+@main-color: #ff4e49;
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: .16rem;
+}
+  
+    #header{
+        display: flex;
+        height: .5rem;
+    background-color: @main-color;
+        .center{
+            flex: 1;
+            height: .5rem;
+            line-height: .5rem;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+        }
+        .left{
+            width: .48rem;
+            height: .5rem;
+            line-height: .5rem;
+            text-align: center;
+            color: #fff;
+        }
+        .download{
+            width: .4rem;
+            height: .4rem;
+            margin: .05rem .05rem;
+            text-align: center;
+            color: #fff;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #main{
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        .product-detail{
+            .product-info{
+                text-align: left;
+                padding: .1rem;
+                .productName{
+                    color: #000;
+                    font-weight: 700;
+                }
+                .productPrice{
+                    color: goldenrod;
+                }
+                .productInfo{
+                    color: #000;
+                }
+                img{
+                    width: 100%;
+                    text-align: center;
+                }
+                .productCity{
+                    
+                    
+                    ul{
+                        width: 1rem;
+                        margin: 0 auto;
+                        box-shadow: 0 0 .01rem #ccc;
+                        list-style: none;
+                        padding: 0 .05rem;
+                        padding-bottom: .1rem;
+                        li{
+                            border-bottom: 1px dashed #ccc;
+                            height: .22rem;
+                            span{
+                                color: black;
+                                strong{
+                                    font-weight: 400;
+                                    float: right;
+                                    color: goldenrod;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+                >div{
+                    padding: .2rem .1rem 0 .1rem;
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+            .product-mmbweixin{
+                padding: .1rem;
+                img{
+                    width: 100%;
+                }
+                .CommentContent{
+                    .form{
+                        // box-shadow: 0 0 1px red;
+                        position: relative;
+                    }
+                    textarea{
+                        margin: 0;
+                    }
+                    .ctrl{
+                        // text-align: right;
+                        // background-color: #eee;
+                        // box-sizing: 0 0 1px #ccc;
+                        position: absolute;
+                        bottom: -0.28rem;
+                        right: 0;
+                    }
+                    .tit{
+                        padding-top: .4rem;
+                    }
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        li{
+                            height: .8rem;
+                            .userimg{
+                                width: .3rem;
+                                height: .3rem;
+                            }
+                            img{
+                                width: 100%;
+                                border-radius: 50%;
+                            }
+                            .con{
+                                position: relative;
+                                .name{
+                                    position: relative;
+                                    font-size: .12rem;
+                                   
+                                    .username{
+                                        color: cornflowerblue;
+                                        position: absolute;
+                                        top: -0.3rem;
+                                        left: .4rem;
+                                    }
+                                    .time{
+                                        position: absolute;
+                                        top: -0.3rem;
+                                        right: 0;
+                                        color: #ccc;
+                                    }
+                                }
+                                .content{
+                                    position: absolute;
+                                    top: 0;
+                                    left: .4rem;
+                                    img{
+                                        width: .3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+#footer {
+    // height: 1.3rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #232a34;
+    .function {
+        margin: .15rem .05rem;
+        height: .35rem;
+        width: auto;
+        border: 1px solid #ccc;
+        a {
+            width: 30%;
+            height: .34rem;
+            position: absolute;
+            text-align: center;
+            line-height: .34rem;
+            color: #fff;
+            font-size: .14rem;
+            &.login  {
+                left: 0;
+                border-right: 1px solid #ccc;
+            }
+            &.register {
+                border-right: 1px solid #ccc;
+                left: 30%;
+            }
+            &.return {
+                right: 0;
+                width: 40%;
+            }
+        }
+    }
+    .download {
+        text-align: center;
+        font-size: .12rem;
+        padding-bottom: .15rem;
+        a {
+            color: red;
+            font-size: .12rem;
+        }
+        span {
+                color: #aeabb1;
+        }
+    }
+}
