@@ -10,21 +10,39 @@
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
     <link rel="stylesheet" href="../css/couponproduct.css">
     <script src="../lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="../lib/layer/layer.js"></script>
 </head>
 <body>
-    <div id="swyh_nav">
-        <div class="left"><i class="mui-icon mui-icon-arrowleft"></i></div>
-        <div class="center">优惠券</div>
-        <div class="right"><i class="mui-icon mui-icon-download"></i><span>APP下载</span></div>
-    </div>
-    <div id="swyhq_main">
-        <!--<div>-->
-            <!--<img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt="">-->
-            <!--<a href="#">C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</a>-->
-            <!--<i class="mui-icon mui-icon-arrowright"></i>-->
-            <!--<p>有效期至10月31日</p>-->
-        <!--</div>-->
-    </div>
+<header id="header">
+	<div class="swyhq-left"><a href="javascript:history.back();"><i class="mui-icon mui-icon-arrowleft"></i></a></div>
+	<div class="swyhq-center">
+		<h5>优惠券</h5>
+	</div>
+	<div class="swyhq-right"><i class="mui-icon mui-icon-download"></i><span>APP下载</span></div>
+</header>
+<main id="main">
+	<div class="mui-scroll-wrapper" id="list">
+		<div class="mui-scroll" id="swyhq_main">
+
+		</div>
+	</div>
+</main>
+<!-- 尾部区域 -->
+<footer id="footer">
+	<div class="swyhq-top">
+		<div class="mui-row">
+			<a class="swyhq-left mui-col-xs-4" href="#">登录</a>
+			<a class="swyhq-center mui-col-xs-4" href="#">注册</a>
+			<a class="swyhq-right mui-col-xs-4" href="#"><i class="fa fa-arrow-up"></i>返回顶部</a>
+		</div>
+	</div>
+	<div class="swyhq-bottom">
+		<a href="#">手机APP下载</a>
+		<span>慢慢买手机版 <a href="#">-- 掌上比价平台</a></span>
+		<p>m.manmanbuy.com </p>
+	</div>
+	<div class="fa fa-arrow-circle-o-up top_back" href='#'></div>
+</footer>
 </body>
 </html>
 <script src="../lib/mui/js/mui.js"></script>

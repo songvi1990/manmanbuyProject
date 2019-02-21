@@ -1,0 +1,140 @@
+html {
+  font-size: 26.66667vw;
+}
+body {
+  font-size: 0.14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+#header {
+  display: flex;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: white;
+  background-color: #f4483e;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+#header a {
+  color: white;
+}
+#header .swyhq-left {
+  width: 0.4rem;
+  font-size: 0.3rem;
+}
+#header .swyhq-center {
+  flex: 1;
+}
+#header .swyhq-center h5 {
+  line-height: 0.4rem;
+  color: white;
+  margin: 0;
+  font-size: 0.2rem;
+}
+#header .swyhq-right {
+  width: 0.4rem;
+}
+#main {
+  flex: 1;
+  overflow: scroll;
+}
+#main #swyhq_main {
+  padding-top: 0.4rem;
+  padding-bottom: 0.79rem;
+}
+#main #swyhq_main .swyhq_main_list {
+  padding-top: 0.05rem;
+  border-bottom: 1px solid #B2B2B2;
+  display: flex;
+  align-items: center;
+}
+#main #swyhq_main .swyhq_main_list .left {
+  flex: 19;
+  display: flex;
+  flex-direction: column;
+}
+#main #swyhq_main .swyhq_main_list .left .top {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+#main #swyhq_main .swyhq_main_list .left .top .left {
+  flex: 1;
+}
+#main #swyhq_main .swyhq_main_list .left .top .left img {
+  width: 100%;
+}
+#main #swyhq_main .swyhq_main_list .left .top .right {
+  color: #000000;
+  font-size: 0.12rem;
+  padding-left: 0.05rem;
+  flex: 2;
+}
+#main #swyhq_main .swyhq_main_list .left .top .right p {
+  color: #000000;
+}
+#main #swyhq_main .swyhq_main_list .left .bottom {
+  flex: 2;
+}
+#main #swyhq_main .swyhq_main_list .left .bottom p {
+  margin-left: 35%;
+  color: #ee7700;
+}
+#main #swyhq_main .swyhq_main_list .right {
+  flex: 1;
+}
+#main #swyhq_main .swyhq_main_list .right .mui-icon-arrowright {
+  color: #B2B2B2;
+}
+.layui-layer-imguide,
+.layui-layer-imgbar {
+  display: inline !important;
+}
+#footer {
+  position: relative;
+  height: 0.8rem;
+  background-color: #eee;
+  z-index: 999;
+}
+#footer .swyhq-top {
+  height: 0.3rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#footer .swyhq-top a {
+  color: black;
+  font-size: 0.14rem;
+  line-height: 0.3rem;
+}
+#footer .swyhq-top a:nth-of-type(n+2) {
+  border-left: 1px solid #eee;
+}
+#footer .swyhq-bottom {
+  margin-top: 0.1rem;
+  font-size: 0.12rem;
+  text-align: center;
+  line-height: 0.12rem;
+}
+#footer .swyhq-bottom a {
+  color: #f4483e;
+}
+#footer .swyhq-bottom span a {
+  color: black;
+}
+#footer .swyhq-bottom p {
+  font-size: 0.12rem;
+}
+#footer .fa-arrow-circle-o-up {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.1rem;
+  font-size: 0.3rem;
+  color: black;
+}
+/*# sourceMappingURL=couponproduct.css.map */
