@@ -1,0 +1,51 @@
+body, div,
+span, p, img, input, a,
+ul, li,
+h1, h2, h3, h4,
+strong, em, ins, del {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+img {
+    border: none;
+    /*清除低版本边框线*/
+    vertical-align: middle;
+    /*行内块元素与文字对齐*/
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+body {
+    font: 12px/100% "微软雅黑";
+    background-color: #f3f6f6;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
